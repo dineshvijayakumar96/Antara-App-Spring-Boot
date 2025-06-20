@@ -1,0 +1,263 @@
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for your Submission</title>
+    <style type="text/css">
+        @import url('https://fonts.cdnfonts.com/css/avenir');
+
+        body {
+            margin: 0;
+            font-family: 'Avenir', sans-serif;
+        }
+
+        table {
+            border-spacing: 0;
+        }
+
+        td {
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        a {
+            color: #da9000;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #a34551;
+            fill: #a34551;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .footer-a {
+            color: #a34551;
+        }
+
+        .wrapper {
+            width: 100%;
+            table-layout: fixed;
+            /* background-color: #a34551; */
+            background-color: #fcf7ec;
+            padding-bottom: 60px;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            color: #212529;
+            box-shadow: 0 0 25px rgb(0, 0, 0, .15);
+        }
+
+        .logo {
+            padding: 0 22px 10px;
+        }
+
+        .social {
+            width: 15px;
+            padding: 0 10px 0 0;
+        }
+
+        .social-media {
+            padding: 15px 0 0 0px;
+        }
+
+        .two-columns {
+            font-size: 0;
+            text-align: center;
+        }
+
+        .two-columns .column {
+            width: 100%;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .col-1 {
+            max-width: 60%;
+        }
+
+        .col-2 {
+            max-width: 40%;
+            text-align: end;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        h3 span {
+            font-weight: 600;
+        }
+
+        @media only screen and (max-width: 600px) {
+            h3 {
+                font-size: 19px;
+            }
+            .social-media {
+            padding: 15px 0 0 0px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+<center class="wrapper">
+
+    <table class="main" width="100%">
+
+        <!-- BORDER -->
+        <tr>
+            <td height="8" style="background-color: #414648;"></td>
+        </tr>
+
+        <!-- LOGO & SOCIAL MEDIA SECTION -->
+        <tr>
+            <td style="padding: 14px 0;">
+                <table width="100%">
+                    <tr>
+                        <td class="two-columns">
+                            <table class="column col-1">
+                                <tr>
+                                    <td class="logo">
+                                        <a href="https://www.antaracares.com/"><img src="https://i.ibb.co/GM12XXw/antara-logo.png"
+                                                         alt="Antara Cares Logo" title="Antara Cares" height="42"></a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="column col-2">
+                                <tbody style="display: inline-block;">
+                                <tr>
+                                    <td class="social-media">
+                                        <a href="https://www.instagram.com/">
+                                            <img class="social" src="https://i.ibb.co/M7yGPTk/instagram-b.png"
+                                                 alt="instagram" border="0">
+                                        </a>
+                                        <a href="https://www.facebook.com/">
+                                            <img class="social" src="https://i.ibb.co/thKLdVW/facebook-b.png"
+                                                 alt="square-facebook" border="0">
+                                        </a>
+                                        <a href="https://www.twitter.com/">
+                                            <img class="social" src="https://i.ibb.co/Rg6RZYK/twitter-b.png"
+                                                 alt="twitter" border="0">
+                                        </a>
+                                        <a href="https://wa.me/917904087668">
+                                            <img class="social" src="https://i.ibb.co/VCLVhMM/whatsapp-b.png"
+                                                 alt="whatsapp" border="0">
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- BANNER IMAGE -->
+        <tr>
+            <td>
+                <a href="https://www.antaracares.com/" title="Antara Cares"><img src="https://i.ibb.co/nRFw2yS/og.jpg" alt="About Antara Cares" width="600"
+                                                                                           style="max-width: 100%;"></a>
+            </td>
+        </tr>
+
+        <!-- TITLE, TEXT & BUTTON -->
+        <tr>
+            <td style="padding: 5px; display: flex; flex-direction: column; align-items: center;">
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <h3>Thank you <span style="color: #001638;" th:text="${name}"></span></h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div width="90%" style="padding: 0 0 15px 0px; margin-left: auto; margin-right: auto;">
+                                <div style="font-weight: 500; text-align: left; padding: 10px;background-color: #ffedcb;">
+                                    <p>Dear <span th:text="${name}"></span>,</p>
+                                    <p>Thank you for reaching out to us through our website. We truly appreciate your interest in <a href="https://www.antaracares.com/">Antara Cares</a>.</p>
+                                    <p>Our team is committed to providing exceptional service and we are excited to assist you with your inquiry. We have received your message and will be in touch shortly.</p>
+                                    <p>In the meantime, please feel free to explore our website <a href="https://www.antaracares.com/">www.antaracares.com</a> for more information about our services and offerings.</p>
+                                    <p>If you have any urgent questions or need immediate assistance, please don't hesitate to contact us directly at <a href="tel:+917845518010">78 45 518 010</a> or via email at <a href="mailto:antaracares@gmail.com">antaracares@gmail.com</a>.</p>
+                                    <p>We look forward to the opportunity to serve you.</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- BORDER -->
+
+        <!-- THREE COLUMN SECTION -->
+
+        <!-- BORDER -->
+
+        <!-- TWO COLUMN SECTION -->
+
+        <!-- FOOTER SECTION -->
+        <tr>
+            <td style="background-color: #414648;">
+                <table width="100%">
+                    <tr>
+                        <td style="padding: 45px 20px; text-align: center;">
+                            <a href="https://www.antaracares.com/"><img src="https://i.ibb.co/YP8t6Xq/antara-logo-w.png"
+                                                                             alt="Antara Cares Logo" title="Antara Cares" height="42"></a>
+
+                            <p style="padding: 5px; color: white; font-size: 14px;">Samruddhi Resort, Agodapali Kelamangalam road, Hosur, Tamil Nadu - 635110</p>
+
+                            <!-- <p style="font-family: 'Poppins', sans-serif; font-size: 14px;"><a href="tell:+917904087668">+91 123 456 7890</a></p>
+
+                            <p style="padding: 5px 5px 15px 5px; font-family: 'Poppins', sans-serif; font-size: 14px;"><a href="mailto:example@gmail.com">example@gmail.com</a></p> -->
+
+                            <a href="https://www.instagram.com/">
+                                <img class="social" src="https://i.ibb.co/YBf4qZm/instagram.png"
+                                     alt="instagram" border="0">
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <img class="social" src="https://i.ibb.co/QmxvyRc/facebook.png"
+                                     alt="square-facebook" border="0">
+                            </a>
+                            <a href="https://www.twitter.com/">
+                                <img class="social" src="https://i.ibb.co/Pghr34z/twitter.png"
+                                     alt="twitter" border="0">
+                            </a>
+                            <a href="https://wa.me/917904087668">
+                                <img class="social" src="https://i.ibb.co/7WZKzSf/whatsapp.png"
+                                     alt="whatsapp" border="0">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- BORDER -->
+        <tr>
+            <td height="8" style="background-color: #f4d3a8;"></td>
+        </tr>
+
+
+
+    </table> <!-- End Main Class -->
+
+</center> <!-- End Wrapper -->
+</body>
+
+</html>
