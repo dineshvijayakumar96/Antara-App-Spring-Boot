@@ -15,24 +15,40 @@ Welcome to the **Antara App Backend**, the Spring Boot-powered REST API that fue
 - 👥 **Role-based Access Control**
 - 📬 **Contact Form Data Submission + Management**
 - 🔁 **CRUD Operations** on key entities
+- ✅ Supports **pagination**, **filtering**, and is **React Admin-compatible**
 - 🌍 **CORS configured** for frontend access
 - 🐘 PostgreSQL / 🐬 MySQL compatible
 - ☁️ **Deployed on Render**
 
 ---
 
+### 📧 Email Notifications
+- Dynamic email generation using **Thymeleaf**
+- Sends:
+    - Admin notification on new submission
+    - Acknowledgment to the user
+
+---
+
+### 🧠 Admin Dashboard Integration
+- APIs structured to support [React Admin](https://marmelab.com/react-admin)
+- Headers and formats aligned for smooth integration
+
+---
+
 ## 📦 Tech Stack
 
-| Layer            | Tech Used              |
-|------------------|------------------------|
-| Language         | Java 17                |
-| Framework        | Spring Boot 3          |
-| API Design       | Spring MVC / REST      |
-| Security         | Spring Security + JWT  |
-| ORM & DB         | Spring Data JPA + JPA  |
-| Database         | PostgreSQL             |
-| Deployment       | Render                 |
-| Dev Tools        | Maven, Spring DevTools |
+| Layer           | Tech Used                  |
+|-----------------|----------------------------|
+| Language        | Java 17                    |
+| Framework       | Spring Boot 3              |
+| API Design      | Spring MVC / REST          |
+| Security        | Spring Security + JWT      |
+| ORM & DB        | Spring Data JPA + JPA      |
+| Email           | JavaMailSender + Thymeleaf |
+| Database        | PostgreSQL                 |
+| Deployment      | Render                     |
+| Dev Tools       | Maven, Spring DevTools     |
 
 ---
 
@@ -51,14 +67,16 @@ Welcome to the **Antara App Backend**, the Spring Boot-powered REST API that fue
 ├── src
 │   ├── main
 │   │   ├── java/com/antara
-│   │   │   ├── controller           # Handles REST API endpoints
-│   │   │   ├── dao                  # Spring Data JPA repositories
-│   │   │   ├── entity               # Entity and DTO classes
-│   │   │   ├── security             # Security and general config
-│   │   │   └── service              # Business logic layer
+│   │   │   ├── controller/               # Handles REST API endpoints
+│   │   │   ├── dao/                      # Spring Data JPA repositories
+│   │   │   ├── entity/                   # Entity and DTO classes
+│   │   │   ├── security/                 # Security and general config
+│   │   │   ├── service/                  # Business logic layer
+│   │   │   └── AntaracaresApplication    # Main application
 │   └── resources
-│       └── application.properties   # App configuration
-├── pom.xml                          # Maven project descriptor
+│       ├── templates/                    # Thymeleaf HTML for emails
+│       └── application.properties        # App configuration
+├── pom.xml                               # Maven project descriptor
 ````
 
 ## 📚 Learning Highlights
